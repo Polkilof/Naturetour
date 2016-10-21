@@ -1,0 +1,16 @@
+@mixin breakpoint($class) {
+	@if $class == mobile {
+		@media screen and (max-width: $mobile), 
+		screen and (orientation: landscape) and (max-width: $mobile),
+		screen and (orientation: portrait ) and (max-width: $mobile) { @content; }
+	}
+	@else if $class == mobile-md {
+		@media screen and (max-width: $mobile-md) { @content; }
+	}
+	@else if $class == tablet {
+		@media screen and (max-width: $tablet) { @content; }
+	}
+	@else if $class == mobile-sm {
+		@media screen and (max-width: $mobile-sm) { @content; }
+	}
+}

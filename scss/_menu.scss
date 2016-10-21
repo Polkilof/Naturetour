@@ -1,0 +1,50 @@
+/* menu */
+#menu {
+	float: right;
+	margin: 0;
+	padding: 14px 0 0;
+	overflow: hidden;
+	@include breakpoint(tablet) {
+		float: none;
+		text-align: center;
+		padding: 16px 0 0;
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		font-size: 0;
+		line-height: 0;
+		li + li {
+			margin: 0 0 0 15px;
+			@include breakpoint(mobile) {
+				margin: 0 0 0 14px;
+			}
+		}
+		li {
+			display: inline-block;
+			vertical-align: top;
+			position: relative;
+			a {
+				display: block;
+				font-size: $menu-a-font-family;
+				line-height: $menu-a-font-size-large;
+				font-family: $ZurichR;
+				color: #209a28;
+				padding: 0;
+				text-transform: uppercase;
+				@include breakpoint(mobile) {
+					font-size: 12px;
+				}
+			}
+			a:hover {
+				opacity: $hover-opacity;
+			}
+		}
+	}
+	&:after {
+		content: '';
+		clear: both;
+		display: block;
+	}
+}

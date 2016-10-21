@@ -1,0 +1,66 @@
+/* header */
+#header {
+	padding: 18px 0 12px;
+	overflow: hidden;
+	.clearfix {
+		content: '';
+		clear: both;
+		display: block;
+		overflow: hidden;
+		padding-top: 1px;
+	}
+	.logo {
+		float: left;
+		margin: 2px 0 0 25px;
+		overflow: hidden;
+		background: url(#{$images}ico_logo.png) no-repeat;
+		@include breakpoint(mobile-md) {
+			margin: 4px 0 0 0;
+		}
+		.text-logo {
+			float: left;
+			padding: 12px 0 10px 28px;
+			a {
+				font-size: $text-logo-a-font-family;
+				line-height: $text-logo-a-font-size-large;
+				font-family: $Klavika;
+				font-weight: normal;
+				color: #231f20;
+				text-transform: uppercase;
+				small {
+					display: block;
+					font-size: $text-logo-small-font-family;
+					line-height: $text-logo-small-font-size-large;
+					font-family: $MyriadProSB;
+					color: #858689;
+					text-transform: uppercase;
+					text-shadow: 1px 1px 2px $white;
+					padding: 0 0 0 5px;
+				}
+			}
+		}
+	}
+	.main-nav {
+		float: right;
+		text-align: right;
+		margin: -5px 0 0 0;
+		@include breakpoint(tablet) {
+			float: none;
+		}
+		.call {
+			font-size: $main-nav-p-font-family;
+			line-height: $main-nav-p-font-size-large;
+			font-family: $MyriadProR;
+			color: #585755;
+			@include breakpoint(tablet) {
+				display: none;
+			}
+			a {
+				font-size: $main-nav-a-font-family;
+				line-height: $main-nav-a-font-size-large;
+				font-family: $MyriadProR;
+				color: #373737;
+			}
+		}
+	}
+}

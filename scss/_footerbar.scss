@@ -1,0 +1,273 @@
+/* footerbar */
+#footerbar {
+	margin: 0 0 15px;
+	.fbar {
+		background-color: $fbar-bg;
+		border-radius: 5px;
+		.fbar-title {
+			width: 100%;
+			border-bottom: 2px solid #635543;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			background-color: #999387;
+			background: #6e675e linear-gradient(to top, #6e675e, #999387);
+			margin: 0;
+			color: $white;
+			text-align: center;
+			h2 {
+				font-size: $fbar-h1-font-family;
+				line-height: $fbar-h1-font-size-large;
+				font-weight: normal;
+				font-style: italic;
+				margin: 0;
+				padding: 10px;
+				text-shadow: 1px 1px 2px $black;
+			}
+		}
+		.row {
+			position: relative;
+			.twitter {
+				float: left;
+				width: 25%;
+				padding: 20px 25px;
+				box-sizing: border-box;
+				@include breakpoint(tablet) {
+					float: none;
+					width: 100%;
+					padding: 15px 20px 5px;
+				}
+				h2 {
+					color: #64522a;
+					font-size: $fbar-h2-font-family;
+					line-height: $fbar-h2-font-size-large;
+					font-family: $Klavika;
+					font-weight: normal;
+					text-transform: uppercase;
+					margin: 0 0 5px;
+					position: relative;
+					@include breakpoint(tablet) {
+						display: inline-block;
+					}
+					&:after {
+						background-image: url(#{$images}fbar_icoset.png);
+						background-position: 0 0;
+						background-repeat: no-repeat;
+						position: absolute;
+						content: '';
+						height: 18px;
+						width: 29px;
+						right: 8px;
+						top: 0px;
+						@include breakpoint(tablet) {
+							right: -35px;
+						}
+					}
+				}
+				span {
+					color: #757268;
+					font-size: $fbar-span-font-family;
+					line-height: $fbar-span-font-size-large;
+					display: block;
+					padding: 4px;
+					box-sizing: border-box;
+				}
+				.button {
+					font-size: $fbar-button-font-family;
+					line-height: $fbar-button-font-size-large;
+					font-family: $Klavika;
+					font-weight: normal;
+					display: inline-block;
+					vertical-align: middle;
+					position: relative;
+					background: #837c71;
+					background: #6e675e linear-gradient(to top, #6e675e, #999387) repeat scroll 0 0;
+					border: 2px solid #867b6b;
+					border-radius: 5px;
+					-moz-box-sizing: border-box;
+					box-sizing: border-box;
+					margin: 12px auto 0;
+					padding: 2px 30px 2px 6px;
+					color: #fff;
+					text-transform: uppercase;
+					text-align: left;
+					text-shadow: 0 -1px 2px #000;
+					box-shadow: 0 1px 0 0 #b0a59d inset, 0 0 2px 3px #e8e5de;
+					cursor: pointer;
+					width: 100%;
+					max-width: 190px;
+					outline-style: none;
+					&:before {
+						position: absolute;
+						top: 0px;
+						right: 30px;
+						content: '';
+						width: 1px;
+						height: 100%;
+						background: #867b6b;
+						box-shadow: 0px 1px 0 0 #b0a59d;
+					}
+					&:after {
+						background-image: url(#{$images}fbar_icoset.png);
+						background-position: -4px -21px;
+						background-repeat: no-repeat;
+						position: absolute;
+						content: '';
+						height: 20px;
+						width: 26px;
+						right: 0;
+						top: 2px;
+					}
+					&:hover {
+						text-shadow: none;
+					}
+					&:active {
+						bottom: -1px;
+					}
+				}
+				&:before {
+					position: absolute;
+					top: 16px;
+					left: 25%;
+					content: '';
+					width: 1px;
+					height: 85%;
+					background: #d8d6ce;
+					box-shadow: 0px 1px 0 0 $white;
+					@include breakpoint(tablet) {
+						display: none;
+					}
+				}
+			}
+			.links {
+				float: left;
+				width: 52%;
+				padding: 20px 25px;
+				box-sizing: border-box;
+				font-size: 0;
+				line-height: 0;
+				overflow: hidden;
+				@include breakpoint(tablet) {
+					float: none;
+					width: 100%;
+					padding: 15px 20px 5px;
+				}
+				@include breakpoint(mobile-sm) {
+					float: left;
+					width: 50%;
+					padding: 15px 20px 5px;
+				}
+				@include breakpoint(mobile) {
+					float: none;
+					width: 100%;
+					padding: 15px 20px 5px;
+				}
+				h2 {
+					color: #64522a;
+					font-size: $fbar-h2-font-family;
+					line-height: $fbar-h2-font-size-large;
+					font-family: $Klavika;
+					font-weight: normal;
+					text-transform: uppercase;
+					margin: 0 0 10px;
+				}
+				ul {
+					margin: 0;
+					padding: 0;
+					list-style-type: none;
+					display: inline-block;
+					vertical-align: top;
+					@include breakpoint(tablet) {
+						display: block;
+						width: 33.333%;
+						float: left;
+						padding: 5px;
+						box-sizing: border-box;
+					}
+					@include breakpoint(mobile-sm) {
+						width: 100%;
+						float: none;
+						padding: 0;
+						box-sizing: border-box;
+					}
+					li {
+						margin-bottom: 4px;
+						a {
+						color: #757268;
+						font-size: $fbar-a-font-family;
+						line-height: $fbar-a-font-size-large;
+						}
+					}
+				}
+				ul + ul {
+					margin: 0 0 0 45px;
+					@include breakpoint(tablet) {
+						margin: 0;
+					}
+				}
+			}
+			.contact {
+				float: left;
+				width: 23%;
+				padding: 20px 25px;
+				box-sizing: border-box;
+				color: #757268;
+				font-size: $fbar-span-font-family;
+				line-height: $fbar-span-font-size-large;
+				@include breakpoint(tablet) {
+					float: none;
+					width: 100%;
+					padding: 15px 20px 5px;
+				}
+				@include breakpoint(mobile-sm) {
+					float: left;
+					width: 50%;
+					padding: 15px 20px 5px;
+				}
+				@include breakpoint(mobile) {
+					float: none;
+					width: 100%;
+					padding: 15px 20px 5px;
+				}
+				h2 {
+					color: #64522a;
+					font-size: $fbar-h2-font-family;
+					line-height: $fbar-h2-font-size-large;
+					font-family: $Klavika;
+					font-weight: normal;
+					text-transform: uppercase;
+					margin: 0 0 5px;
+				}
+				span {
+					display: block;
+					padding: 4px;
+					box-sizing: border-box;
+				}
+				p {
+					margin: 15px 0 0;
+					padding: 4px;
+					box-sizing: border-box;
+				}
+				&:before {
+					position: absolute;
+					top: 16px;
+					right: 23%;
+					content: '';
+					width: 1px;
+					height: 85%;
+					background: #d8d6ce;
+					box-shadow: 0px 1px 0 0 $white;
+					@include breakpoint(tablet) {
+						display: none;
+					}
+				}
+			}
+			&:after {
+				content: '';
+				clear: both;
+				display: block;
+				font-size: 0;
+				line-height: 0;
+			}
+		}
+	}
+}

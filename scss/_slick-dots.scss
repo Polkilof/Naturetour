@@ -1,0 +1,67 @@
+/* slick-dots */
+.slick-dotted .slick-slider {
+	margin: 0;
+}
+.slick-dots {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+	bottom: 28px;
+	right: 165px;
+	z-index: 6;
+	counter-reset: number;
+	@include breakpoint(mobile-md) {
+		bottom: 5px;
+		right: 50%;
+		transform: translateX(50%);
+	}
+	li {
+		display: inline-block;
+		vertical-align: top;
+		margin-left: 10px;
+		button {
+			border-radius: 50%;
+			width: 24px;
+			height: 24px;
+			position: relative;
+			border: none;
+			background: #6b685e;
+			font-size: $slick-dots-button-font-family;
+			line-height: $slick-dots-button-font-size-large;
+			font-weight: bold;
+			color: $white;
+			padding: 0;
+			box-shadow: 1px -1px 0 0 #a9a493 inset;
+			outline: none;
+			&:before {
+				counter-increment: number;
+				content: counter(number);
+				font-size: $slick-dots-button-font-family;
+				line-height: $slick-dots-button-before-font-size-large;
+				font-weight: bold;
+				color: $white;
+				position: absolute;
+				width: 26px;
+				height: 26px;
+				top: 50%;
+				left: 50%;
+				margin: -13px 0 0 -13px;
+				background: #0f941a;
+				background: #0f941a linear-gradient(to top, #0f941a, #66c13e) repeat scroll 0 0;
+				border-radius: 50%;
+				opacity: 0;
+				z-index: 0;
+				-webkit-transition: opacity .3s;
+				-o-transition: opacity .3s;
+				transition: opacity .3s;
+			}
+			&:hover:before{opacity: 1;}
+		}
+		&.slick-active button:before {
+			opacity: 1;
+		}
+	}
+}

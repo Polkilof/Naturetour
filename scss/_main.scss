@@ -1,0 +1,31 @@
+/* main */
+#main {
+	margin-bottom: 20px;
+	.breadcrumb {
+		list-style-type: none;
+		padding: 0;
+		margin: 0 0 6px;
+		.breadcrumb-item {
+			font-size: $breadcrumb-item-font-family;
+			line-height: $breadcrumb-item-font-size-large;
+			font-weight: normal;
+			color: #14961c;
+			padding: 0 0 0 23px;
+		}
+	}
+	.rows {
+		background-color: $white;
+		border-radius: 5px;
+		border: 1px solid $white;
+		box-sizing: border-box;
+		padding: 0;
+		margin-bottom: 0;
+		overflow: hidden;
+		position: relative;
+	}
+	&:after {
+		content: '';
+		clear: both;
+		display: block;
+	}
+}
